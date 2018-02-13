@@ -5,12 +5,15 @@
 
 <h2>AddProduct</h2>
 
-<form asp-action="AddProduct" method="post">
+<form action="/Product/AddProduct" method="post" class="form-inline">
     <br />
-    ID: <input type="number" name="ProductID" /><br />
-    Name: <input type="text" name="Name" /><br />
-    Description: <input type="text" name="Description" /><br />
-    Price: <input type="number" name="Price" /><br />
-    Category: <input type="text" name="Category" /><br />
-    <input type="submit" value="Submit" /><br />
+    ID: <input type="number" name="ProductID" class="form-control" /><br />
+    Name: <input type="text" name="Name" class="form-control"/><br />
+    Description: <input type="text" name="Description" class="form-control"/><br />
+    Category: <input type="text" name="Category" class="form-control" /><br />
+    Price: <input type="number" name="Price" class="form-control" /><br />
+    Quantity: <input type="number" name="Quantity" class="form-control" /><br />
+    <input type="submit" value="Submit" class="btn btn-success" /> 
+    <a href="/Product" class="btn btn-warning">Cancel</a>
+   
 </form>

@@ -1,10 +1,10 @@
 ﻿@model DemoLab4.Models.Product
 
 @{
-    ViewData["Title"] = "ShowSampleProduct";
+    ViewData["Title"] = "Product Details";
 }
 
-<h2>ShowSampleProduct</h2>
+<h2>Product Details</h2>
 
 <div>
     <h4>Product</h4>
@@ -55,6 +55,5 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+   <a asp-action="Index">Back to product home</a>
 </div>
