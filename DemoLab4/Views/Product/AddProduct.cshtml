@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<h2>AddProduct</h2>
+
+<form asp-action="AddProduct" method="post">
+    <br />
+    ID: <input type="number" name="ProductID" /><br />
+    Name: <input type="text" name="Name" /><br />
+    Description: <input type="text" name="Description" /><br />
+    Price: <input type="number" name="Price" /><br />
+    Category: <input type="text" name="Category" /><br />
+    <input type="submit" value="Submit" /><br />
+</form>

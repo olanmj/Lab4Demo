@@ -1,0 +1,60 @@
+﻿@model DemoLab4.Models.Product
+
+@{
+    ViewData["Title"] = "ShowSampleProduct";
+}
+
+<h2>ShowSampleProduct</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            ProductID
+        </dt>
+        <dd>
+            @Model.ProductID
+        </dd>
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @Model.Name
+        </dd>
+        <dt>
+           Description
+        </dt>
+        <dd>
+            @Model.Description
+        </dd>
+        <dt>
+            Price
+        </dt>
+        <dd>
+            @Model.Price.ToString("C")
+        </dd>
+        <dt>
+            Category
+        </dt>
+        <dd>
+            @Model.Category
+        </dd>
+        <dt>
+            Quantity
+        </dt>
+        <dd>
+            @Model.Quantity
+        </dd>
+        <dt>
+            AmountDue
+        </dt>
+        <dd>
+            @Model.AmountDue.ToString("C")
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

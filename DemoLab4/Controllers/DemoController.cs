@@ -16,7 +16,11 @@ namespace DemoLab4.Controllers
 
         public IActionResult Page2(int id)
         {
-            return View(id);
+            if (id < 10)
+            {
+                return View(id);
+            }
+            throw new Exception("Number too big");
         }
 
         public IActionResult Page3(string word, int count)
