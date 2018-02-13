@@ -18,5 +18,12 @@ namespace DemoLab4.Controllers
         {
             return View(id);
         }
+
+        public IActionResult Page3(string word, int count)
+        {
+            ViewData["Word"] = word;
+            ViewData["Count"] = count;
+            return View();
+        }
     }
 }
