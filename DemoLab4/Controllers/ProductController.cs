@@ -59,7 +59,8 @@ namespace DemoLab4.Controllers
             return View();
         }
 
-        public IActionResult ShowSampleProduct() {
+        public IActionResult ShowSampleProduct()
+        {
             Product myProduct = new Product
             {
                 ProductID = 100,
@@ -72,15 +73,23 @@ namespace DemoLab4.Controllers
             return View("Details", myProduct);
         }
 
-        public IActionResult ProductList()
+        public IActionResult ProductList(string searchTerm)
         {
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                return View(productList.FindAll(p => p.Category.Contains(searchTerm)));
+            }
             return View(productList);
         }
 
         public IActionResult Details(int id)
         {
             var product = productList.Find(p => p.ProductID == id);
-            return View(product);
+            if (product != null)
+            {
+                return View(product);
+            }
+            return NotFound("Product not found");
         }
 
         public IActionResult AddProduct()
