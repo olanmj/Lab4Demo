@@ -12,7 +12,8 @@ namespace DemoLab4.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            DateTime date = DateTime.Now;
+            return View(date);
         }
 
         public IActionResult About()

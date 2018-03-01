@@ -103,7 +103,7 @@ namespace DemoLab4.Controllers
             if (ModelState.IsValid)
             {
                 productList.Add(product);
-                return RedirectToAction("Index");
+                return RedirectToAction("ProductList");
             }
             else
                 return View(product);
